@@ -9,10 +9,13 @@ import UIKit
 
 class PaymentMethodsViewController: UIViewController {
 
+    private var viewModel = PaymentMethodsViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.isHidden = true
+        viewModel.getPaymentList()
     }
 
 }

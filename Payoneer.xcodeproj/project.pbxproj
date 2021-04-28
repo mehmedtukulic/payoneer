@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		841B766B263A04000008DF0B /* PaymentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B766A263A04000008DF0B /* PaymentList.swift */; };
+		841B7674263A08210008DF0B /* PaymentWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B7673263A08210008DF0B /* PaymentWorker.swift */; };
+		841B767C263A0B4C0008DF0B /* PaymentMethodsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B767B263A0B4C0008DF0B /* PaymentMethodsViewModel.swift */; };
 		847B1E0B2639E42200F69855 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B1E0A2639E42200F69855 /* AppDelegate.swift */; };
 		847B1E0F2639E42200F69855 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B1E0E2639E42200F69855 /* ViewController.swift */; };
 		847B1E122639E42200F69855 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847B1E102639E42200F69855 /* Main.storyboard */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		841B766A263A04000008DF0B /* PaymentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentList.swift; sourceTree = "<group>"; };
+		841B7673263A08210008DF0B /* PaymentWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentWorker.swift; sourceTree = "<group>"; };
+		841B767B263A0B4C0008DF0B /* PaymentMethodsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsViewModel.swift; sourceTree = "<group>"; };
 		847B1E072639E42200F69855 /* Payoneer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Payoneer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847B1E0A2639E42200F69855 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847B1E0E2639E42200F69855 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +84,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		841B7669263A03A40008DF0B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				841B766A263A04000008DF0B /* PaymentList.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		841B7672263A08050008DF0B /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				841B7673263A08210008DF0B /* PaymentWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
 		847B1DFE2639E42200F69855 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				847B1E3D2639E4AA00F69855 /* Supporting files */,
+				841B7672263A08050008DF0B /* Workers */,
+				841B7669263A03A40008DF0B /* Models */,
 				847B1E472639E5BC00F69855 /* Scenes */,
 				847B1E132639E42500F69855 /* Assets.xcassets */,
 			);
@@ -159,6 +183,7 @@
 			children = (
 				847B1E4A2639E78A00F69855 /* PaymentMethodsViewController.swift */,
 				847B1E4B2639E78A00F69855 /* PaymentMethodsViewController.xib */,
+				841B767B263A0B4C0008DF0B /* PaymentMethodsViewModel.swift */,
 			);
 			path = "Payment methods";
 			sourceTree = "<group>";
@@ -296,6 +321,9 @@
 			files = (
 				847B1E0F2639E42200F69855 /* ViewController.swift in Sources */,
 				847B1E4C2639E78B00F69855 /* PaymentMethodsViewController.swift in Sources */,
+				841B766B263A04000008DF0B /* PaymentList.swift in Sources */,
+				841B7674263A08210008DF0B /* PaymentWorker.swift in Sources */,
+				841B767C263A0B4C0008DF0B /* PaymentMethodsViewModel.swift in Sources */,
 				847B1E0B2639E42200F69855 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
