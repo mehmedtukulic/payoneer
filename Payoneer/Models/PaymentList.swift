@@ -32,25 +32,6 @@ struct PaymentList: Codable {
         enum CodingKeys: String, CodingKey {
             case applicable
         }
-        
-        struct PaymentOption: Codable {
-            let code: String
-            let label: String
-            let method: String
-            let links: Link
-            
-            enum CodingKeys: String, CodingKey {
-                case code,label,method,links
-            }
-            
-            struct Link: Codable {
-                let logo: String
-                
-                enum CodingKeys: String, CodingKey {
-                    case logo
-                }
-            }
-        }
     }
     
     struct Payment: Codable {
@@ -64,4 +45,24 @@ struct PaymentList: Codable {
     }
     
 }
+
+struct PaymentOption: Codable {
+    let code: String
+    let label: String
+    let method: String
+    let links: Link
+    
+    enum CodingKeys: String, CodingKey {
+        case code,label,method,links
+    }
+    
+    struct Link: Codable {
+        let logo: String
+        
+        enum CodingKeys: String, CodingKey {
+            case logo
+        }
+    }
+}
+
 

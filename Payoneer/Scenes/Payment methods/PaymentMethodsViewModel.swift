@@ -9,7 +9,8 @@ import Foundation
 
 class PaymentMethodsViewModel{
     var paymentList: PaymentList!
-    
+    var paymentOptions: Box<[PaymentOption]> = Box([])
+    var errorMessage: Box<String> = Box("")
 }
 
 extension PaymentMethodsViewModel {
@@ -17,8 +18,10 @@ extension PaymentMethodsViewModel {
         
         PaymentWorker().getPaymentList { [weak self] (list) in
             self?.paymentList = list
+            self?.paymentOptions.value = list.networks.applicable
         } failure: { (error) in
             print(error)
+            self.errorMessage.value = error
         }
 
     }

@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentMethodsViewController" customModule="Payoneer" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="vIR-mm-3bX" id="WDv-5h-KCG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,14 +18,48 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAYMENT METHODS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4YQ-Nt-US7">
+                    <rect key="frame" x="144.5" y="74" width="125" height="15"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose payment method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgc-IB-yHU">
+                    <rect key="frame" x="24" y="129" width="194.5" height="20"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="vIR-mm-3bX">
+                    <rect key="frame" x="24" y="173" width="366" height="665"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="167-Vo-Nq3">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBlueColor"/>
+            <color key="backgroundColor" red="0.96470588239999999" green="0.96862745100000003" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4YQ-Nt-US7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="8ss-kp-yXG"/>
+                <constraint firstItem="vIR-mm-3bX" firstAttribute="top" secondItem="Sgc-IB-yHU" secondAttribute="bottom" constant="24" id="QwO-LL-TGp"/>
+                <constraint firstItem="vIR-mm-3bX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="SJG-8K-Ovo"/>
+                <constraint firstItem="Sgc-IB-yHU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="YhQ-qV-NNE"/>
+                <constraint firstItem="4YQ-Nt-US7" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="kkM-sx-hav"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vIR-mm-3bX" secondAttribute="trailing" constant="24" id="lh1-eh-D0h"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vIR-mm-3bX" secondAttribute="bottom" constant="24" id="yuG-bm-Rn0"/>
+                <constraint firstItem="Sgc-IB-yHU" firstAttribute="top" secondItem="4YQ-Nt-US7" secondAttribute="bottom" constant="40" id="zHk-VU-X4w"/>
+            </constraints>
             <point key="canvasLocation" x="-1" y="104"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

@@ -10,6 +10,11 @@
 		841B766B263A04000008DF0B /* PaymentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B766A263A04000008DF0B /* PaymentList.swift */; };
 		841B7674263A08210008DF0B /* PaymentWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B7673263A08210008DF0B /* PaymentWorker.swift */; };
 		841B767C263A0B4C0008DF0B /* PaymentMethodsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B767B263A0B4C0008DF0B /* PaymentMethodsViewModel.swift */; };
+		841B7681263A26D60008DF0B /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B7680263A26D60008DF0B /* Box.swift */; };
+		841B768B263A2A180008DF0B /* PaymentMethodViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B7689263A2A180008DF0B /* PaymentMethodViewCell.swift */; };
+		841B768C263A2A180008DF0B /* PaymentMethodViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841B768A263A2A180008DF0B /* PaymentMethodViewCell.xib */; };
+		841B7695263A2F410008DF0B /* UICell+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B7694263A2F410008DF0B /* UICell+Extra.swift */; };
+		841B769A263A34840008DF0B /* UIImage+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B7699263A34840008DF0B /* UIImage+Extra.swift */; };
 		847B1E0B2639E42200F69855 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B1E0A2639E42200F69855 /* AppDelegate.swift */; };
 		847B1E0F2639E42200F69855 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B1E0E2639E42200F69855 /* ViewController.swift */; };
 		847B1E122639E42200F69855 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847B1E102639E42200F69855 /* Main.storyboard */; };
@@ -42,6 +47,11 @@
 		841B766A263A04000008DF0B /* PaymentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentList.swift; sourceTree = "<group>"; };
 		841B7673263A08210008DF0B /* PaymentWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentWorker.swift; sourceTree = "<group>"; };
 		841B767B263A0B4C0008DF0B /* PaymentMethodsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsViewModel.swift; sourceTree = "<group>"; };
+		841B7680263A26D60008DF0B /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		841B7689263A2A180008DF0B /* PaymentMethodViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodViewCell.swift; sourceTree = "<group>"; };
+		841B768A263A2A180008DF0B /* PaymentMethodViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentMethodViewCell.xib; sourceTree = "<group>"; };
+		841B7694263A2F410008DF0B /* UICell+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICell+Extra.swift"; sourceTree = "<group>"; };
+		841B7699263A34840008DF0B /* UIImage+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extra.swift"; sourceTree = "<group>"; };
 		847B1E072639E42200F69855 /* Payoneer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Payoneer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847B1E0A2639E42200F69855 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847B1E0E2639E42200F69855 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +110,24 @@
 			path = Workers;
 			sourceTree = "<group>";
 		};
+		841B7688263A29EB0008DF0B /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				841B7689263A2A180008DF0B /* PaymentMethodViewCell.swift */,
+				841B768A263A2A180008DF0B /* PaymentMethodViewCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		841B7693263A2F220008DF0B /* Extensions & Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				841B7694263A2F410008DF0B /* UICell+Extra.swift */,
+				841B7699263A34840008DF0B /* UIImage+Extra.swift */,
+			);
+			path = "Extensions & Utilities";
+			sourceTree = "<group>";
+		};
 		847B1DFE2639E42200F69855 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +151,7 @@
 		847B1E092639E42200F69855 /* Payoneer */ = {
 			isa = PBXGroup;
 			children = (
+				841B7693263A2F220008DF0B /* Extensions & Utilities */,
 				847B1E3D2639E4AA00F69855 /* Supporting files */,
 				841B7672263A08050008DF0B /* Workers */,
 				841B7669263A03A40008DF0B /* Models */,
@@ -154,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				847B1E0A2639E42200F69855 /* AppDelegate.swift */,
+				841B7680263A26D60008DF0B /* Box.swift */,
 				847B1E182639E42500F69855 /* Info.plist */,
 			);
 			path = "Supporting files";
@@ -181,6 +211,7 @@
 		847B1E492639E5D800F69855 /* Payment methods */ = {
 			isa = PBXGroup;
 			children = (
+				841B7688263A29EB0008DF0B /* cells */,
 				847B1E4A2639E78A00F69855 /* PaymentMethodsViewController.swift */,
 				847B1E4B2639E78A00F69855 /* PaymentMethodsViewController.xib */,
 				841B767B263A0B4C0008DF0B /* PaymentMethodsViewModel.swift */,
@@ -295,6 +326,7 @@
 				847B1E172639E42500F69855 /* LaunchScreen.storyboard in Resources */,
 				847B1E142639E42500F69855 /* Assets.xcassets in Resources */,
 				847B1E122639E42200F69855 /* Main.storyboard in Resources */,
+				841B768C263A2A180008DF0B /* PaymentMethodViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,11 +351,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841B768B263A2A180008DF0B /* PaymentMethodViewCell.swift in Sources */,
 				847B1E0F2639E42200F69855 /* ViewController.swift in Sources */,
+				841B769A263A34840008DF0B /* UIImage+Extra.swift in Sources */,
+				841B7681263A26D60008DF0B /* Box.swift in Sources */,
 				847B1E4C2639E78B00F69855 /* PaymentMethodsViewController.swift in Sources */,
 				841B766B263A04000008DF0B /* PaymentList.swift in Sources */,
 				841B7674263A08210008DF0B /* PaymentWorker.swift in Sources */,
 				841B767C263A0B4C0008DF0B /* PaymentMethodsViewModel.swift in Sources */,
+				841B7695263A2F410008DF0B /* UICell+Extra.swift in Sources */,
 				847B1E0B2639E42200F69855 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
