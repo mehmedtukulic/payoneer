@@ -18,15 +18,46 @@ class PayoneerTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testPaymentWorker(){
+        let worker = PaymentWorker()
+        var list: PaymentList!
+        var errorMessage: String!
+        
+        worker.getPaymentList { (paymentList) in
+            list = paymentList
+        } failure: { (error) in
+            errorMessage = error
+        }
+        
+         let exp = expectation(description: "Test after 2 seconds")
+        
+         let result = XCTWaiter.wait(for: [exp], timeout: 2.0)
+         if result == XCTWaiter.Result.timedOut {
+            XCTAssertNotNil(list)
+            XCTAssertNil(errorMessage)
+         } else {
+            XCTFail("Delay interrupted")
+         }
+    
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testPaymentMethodsViewModel(){
+        let model = PaymentMethodsViewModel()
+        
+        XCTAssertEqual(true, model.paymentOptions.value.isEmpty)
+        XCTAssertEqual("", model.errorMessage.value)
+        
+        model.getPaymentList()
+        
+        let exp = expectation(description: "Test after 2 seconds")
+       
+        let result = XCTWaiter.wait(for: [exp], timeout: 2.0)
+        if result == XCTWaiter.Result.timedOut {
+            XCTAssertEqual(false, model.paymentOptions.value.isEmpty)
+            XCTAssertEqual("", model.errorMessage.value)
+        } else {
+           XCTFail("Delay interrupted")
         }
     }
 
