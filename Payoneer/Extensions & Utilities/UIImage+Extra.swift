@@ -11,7 +11,7 @@ import UIKit
 var imageCache = NSCache<AnyObject, AnyObject>()
 
 extension UIImageView {
-    func load(urlString: String) {
+    func load(urlString: String, replacement: String) {
         
         if let image = imageCache.object(forKey: urlString as NSString) {
             self.image = image as? UIImage
@@ -25,7 +25,11 @@ extension UIImageView {
                         imageCache.setObject(image, forKey: urlString as NSString)
                         self.image = image
                     }
+                } else {
+                    self.image = UIImage(named: replacement)
                 }
+            } else {
+                self.image = UIImage(named: replacement)
             }
         }
     }

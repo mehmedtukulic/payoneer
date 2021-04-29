@@ -24,13 +24,15 @@ class PaymentMethodsViewController: UIViewController {
     
     private func setupBindings(){
         //Start observing on viewModel variables
-    
         viewModel.paymentOptions.bind{ [weak self] _ in
-            DispatchQueue.main.async {
-                self?.collectionView.reloadData()
-            }
+            self?.collectionView.reloadData()
         }
         
+        viewModel.errorMessage.bind{ [weak self] in
+            if !$0.isEmpty {
+                self?.showError()
+            }
+        }
     }
     
     private func setupCollection(){
@@ -41,7 +43,10 @@ class PaymentMethodsViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.backgroundColor = .clear
     }
-
+    
+    private func showError(){
+        showToast(message: viewModel.errorMessage.value)
+    }
 }
 
 // MARK: - Collection Methods

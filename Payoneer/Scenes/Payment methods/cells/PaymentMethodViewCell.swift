@@ -19,7 +19,7 @@ class PaymentMethodViewCell: UICollectionViewCell {
     
     func setup(model: PaymentOption){
         titleLabel.text = model.label
-        logoImageView.load(urlString: model.links.logo)
+        logoImageView.load(urlString: model.links.logo, replacement: "cardIcon")
     }
 
 }

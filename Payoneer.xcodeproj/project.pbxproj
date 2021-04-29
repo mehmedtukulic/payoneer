@@ -15,6 +15,7 @@
 		841B768C263A2A180008DF0B /* PaymentMethodViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841B768A263A2A180008DF0B /* PaymentMethodViewCell.xib */; };
 		841B7695263A2F410008DF0B /* UICell+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B7694263A2F410008DF0B /* UICell+Extra.swift */; };
 		841B769A263A34840008DF0B /* UIImage+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B7699263A34840008DF0B /* UIImage+Extra.swift */; };
+		841B769F263AF6900008DF0B /* UIController+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B769E263AF6900008DF0B /* UIController+Extra.swift */; };
 		847B1E0B2639E42200F69855 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B1E0A2639E42200F69855 /* AppDelegate.swift */; };
 		847B1E0F2639E42200F69855 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B1E0E2639E42200F69855 /* ViewController.swift */; };
 		847B1E122639E42200F69855 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847B1E102639E42200F69855 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		841B768A263A2A180008DF0B /* PaymentMethodViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentMethodViewCell.xib; sourceTree = "<group>"; };
 		841B7694263A2F410008DF0B /* UICell+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICell+Extra.swift"; sourceTree = "<group>"; };
 		841B7699263A34840008DF0B /* UIImage+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extra.swift"; sourceTree = "<group>"; };
+		841B769E263AF6900008DF0B /* UIController+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIController+Extra.swift"; sourceTree = "<group>"; };
 		847B1E072639E42200F69855 /* Payoneer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Payoneer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847B1E0A2639E42200F69855 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847B1E0E2639E42200F69855 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				841B7694263A2F410008DF0B /* UICell+Extra.swift */,
 				841B7699263A34840008DF0B /* UIImage+Extra.swift */,
+				841B769E263AF6900008DF0B /* UIController+Extra.swift */,
 			);
 			path = "Extensions & Utilities";
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				847B1E4C2639E78B00F69855 /* PaymentMethodsViewController.swift in Sources */,
 				841B766B263A04000008DF0B /* PaymentList.swift in Sources */,
 				841B7674263A08210008DF0B /* PaymentWorker.swift in Sources */,
+				841B769F263AF6900008DF0B /* UIController+Extra.swift in Sources */,
 				841B767C263A0B4C0008DF0B /* PaymentMethodsViewModel.swift in Sources */,
 				841B7695263A2F410008DF0B /* UICell+Extra.swift in Sources */,
 				847B1E0B2639E42200F69855 /* AppDelegate.swift in Sources */,
