@@ -17,13 +17,13 @@ class PaymentMethodsViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
         
-        viewModel.getPaymentList()
         setupBindings()
         setupCollection()
     }
     
     private func setupBindings(){
         //Start observing on viewModel variables
+        
         viewModel.paymentOptions.bind{ [weak self] _ in
             self?.collectionView.reloadData()
         }

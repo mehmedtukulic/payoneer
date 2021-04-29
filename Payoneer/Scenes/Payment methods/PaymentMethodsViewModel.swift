@@ -9,16 +9,24 @@ import Foundation
 
 class PaymentMethodsViewModel{
     var paymentList: PaymentList!
+    
+    //List of available payment methods
     var paymentOptions: Box<[PaymentOption]> = Box([])
     
+    //Error message shown in toast
     var errorMessage: Box<String> = Box("")
+    
+    init() {
+        getPaymentList()
+    }
 }
 
 extension PaymentMethodsViewModel {
     
     func getPaymentList(){
         PaymentWorker().getPaymentList {  [weak self] (list) in
-            //Need to dispatch to main thread after url session task execution
+            
+            //Dispatch to main thread after urlSession task executed
             DispatchQueue.main.async {
                 self?.paymentList = list
                 self?.paymentOptions.value = list.networks.applicable
